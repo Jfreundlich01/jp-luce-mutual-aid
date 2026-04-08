@@ -256,10 +256,21 @@
       el.querySelector('.progress-pct').textContent = pct + '% of goal';
     </script>
 
-    <a href="https://account.venmo.com/u/JP_LUCE_Mutual_Aid" class="donate-btn" target="_blank" rel="noopener">
+    <a href="https://account.venmo.com/u/JP_LUCE_Mutual_Aid" class="donate-btn" target="_blank" rel="noopener" id="donate-btn">
       Donate to Their Rent Fund Now
       <span class="donate-sub">All donations will be given directly to the partner.</span>
     </a>
+    <script>
+      document.getElementById('donate-btn').addEventListener('click', function(e) {
+        if (/iPhone|iPad|Android/i.test(navigator.userAgent)) {
+          e.preventDefault();
+          window.location = 'venmo://paycharge?txn=pay&recipients=JP_LUCE_Mutual_Aid';
+          setTimeout(function() {
+            window.location = 'https://account.venmo.com/u/JP_LUCE_Mutual_Aid';
+          }, 1500);
+        }
+      });
+    </script>
 
     <div class="flyer-section">
       <h2>Download &amp; Share the Flyer</h2>

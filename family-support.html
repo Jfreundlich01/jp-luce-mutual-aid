@@ -294,10 +294,21 @@
       el.querySelector('.progress-pct').textContent = pct + '% of goal';
     </script>
 
-    <a href="https://account.venmo.com/u/Anne-Calabresi" class="donate-btn" target="_blank" rel="noopener">
+    <a href="https://account.venmo.com/u/Anne-Calabresi" class="donate-btn" target="_blank" rel="noopener" id="donate-btn">
       Donate Now
       <span class="donate-sub">Venmo @Anne-Calabresi &middot; comment "For O"</span>
     </a>
+    <script>
+      document.getElementById('donate-btn').addEventListener('click', function(e) {
+        if (/iPhone|iPad|Android/i.test(navigator.userAgent)) {
+          e.preventDefault();
+          window.location = 'venmo://paycharge?txn=pay&recipients=Anne-Calabresi';
+          setTimeout(function() {
+            window.location = 'https://account.venmo.com/u/Anne-Calabresi';
+          }, 1500);
+        }
+      });
+    </script>
 
     <p class="share-note">Can't donate? Sharing this page helps just as much.</p>
 
