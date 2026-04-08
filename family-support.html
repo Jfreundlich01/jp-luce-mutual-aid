@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support a JP Mom of Two | JP LUCE Mutual Aid</title>
+  <style>
+    :root {
+      --bg: #f7eee1;
+      --text: #1a1a1a;
+      --accent: #2e6b4f;
+      --purple: #6b3a7d;
+      --subtle: #6b6560;
+      --link-border: #d4d0c8;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      justify-content: center;
+      padding: 2rem 1rem 4rem;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 540px;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .logo {
+      width: 140px;
+      height: auto;
+      margin: 0 auto 0.5rem;
+      display: block;
+    }
+
+    h1 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: var(--purple);
+      line-height: 1.2;
+    }
+
+    /* Letter */
+    .letter {
+      background: #fff;
+      border: 1px solid var(--link-border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      line-height: 1.8;
+      font-size: 0.95rem;
+    }
+
+    .letter p {
+      margin-bottom: 1rem;
+    }
+
+    .letter p:last-child {
+      margin-bottom: 0;
+    }
+
+    .letter .greeting {
+      font-weight: 600;
+    }
+
+    .letter ul {
+      margin: 0.75rem 0;
+      padding-left: 1.25rem;
+    }
+
+    .letter li {
+      margin-bottom: 0.5rem;
+    }
+
+    /* Donate button */
+    .donate-btn {
+      display: block;
+      width: 100%;
+      padding: 1.1rem;
+      background: var(--purple);
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      border-radius: 12px;
+      margin: 1.5rem 0;
+      transition: background 0.15s, transform 0.1s;
+    }
+
+    .donate-btn:hover {
+      background: #7d4a90;
+      transform: translateY(-1px);
+    }
+
+    .donate-btn:active {
+      transform: translateY(0);
+    }
+
+    .donate-btn:focus-visible {
+      outline: 3px solid var(--purple);
+      outline-offset: 2px;
+    }
+
+    .donate-sub {
+      display: block;
+      font-size: 0.8rem;
+      font-weight: 400;
+      opacity: 0.85;
+      margin-top: 0.3rem;
+    }
+
+    /* Share note */
+    /* Progress bar */
+    .progress {
+      margin: 1.5rem 0 0.5rem;
+    }
+
+    .progress-labels {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.85rem;
+      margin-bottom: 0.4rem;
+    }
+
+    .progress-raised {
+      font-weight: 700;
+      color: var(--purple);
+    }
+
+    .progress-goal {
+      color: var(--subtle);
+    }
+
+    .progress-track {
+      width: 100%;
+      height: 14px;
+      background: #e4ddd4;
+      border-radius: 99px;
+      overflow: hidden;
+    }
+
+    .progress-fill {
+      height: 100%;
+      background: var(--purple);
+      border-radius: 99px;
+      transition: width 0.4s ease;
+    }
+
+    .progress-pct {
+      text-align: center;
+      font-size: 0.8rem;
+      color: var(--subtle);
+      margin-top: 0.3rem;
+    }
+
+    /* Flyer */
+    .flyer-section {
+      margin: 2rem 0;
+      text-align: center;
+    }
+
+    .flyer-section h2 {
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--subtle);
+      margin-bottom: 0.75rem;
+    }
+
+    .flyer-link {
+      display: inline-block;
+      padding: 0.75rem 1.5rem;
+      border: 1px solid var(--link-border);
+      border-radius: 10px;
+      background: #fff;
+      text-decoration: none;
+      color: var(--text);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: background 0.15s;
+    }
+
+    .flyer-link:hover {
+      background: #f0eeea;
+    }
+
+    .share-note {
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--subtle);
+      margin-bottom: 1rem;
+    }
+
+    /* Back link */
+    .back {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+    }
+
+    .back a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--bg);
+      border: 1px solid var(--link-border);
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: 500;
+      line-height: 1;
+    }
+
+    .back a:hover {
+      background: #efe7d9;
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="back">
+      <a href="index.html" aria-label="Back to all links">&larr;</a>
+    </div>
+    <div class="header">
+      <a href="index.html">
+        <img src="logo.png" alt="LUCE" class="logo">
+      </a>
+      <h1>Support a JP Mom of Two</h1>
+    </div>
+
+    <div class="letter">
+      <p class="greeting">Hello everyone,</p>
+
+      <p>Today, I am reaching out through this platform to ask for your heartfelt support for my family.</p>
+
+      <p>In November last year I was stopped for a minor traffic violation. In the process of having that dismissed, immigration officials detained me. With the help of my family's church and people in the community, I was released on bond, but I am now compelled to separate from my partner and my children for an indefinite period.</p>
+
+      <p>My greatest concern is that, as I must leave the country, they will be left without their primary source of financial support. My partner remains behind to care for our 2-year-old baby and her older daughter; right now, they need to raise funds to move to a safe location and cover their basic living expenses&mdash;rent, food, and the children's needs&mdash;while they work to stabilize themselves during this new chapter.</p>
+
+      <p>I have chosen the path of voluntary departure in order to comply with regulations and preserve the opportunity to legally reunite with them in the future. However, the process is difficult, and time is working against us.</p>
+
+      <p><strong>How can you help?</strong></p>
+      <ul>
+        <li>Any donation, no matter how small, will go directly toward covering my family's housing and food expenses.</li>
+        <li>If you are unable to donate, simply sharing this link would be a tremendous help to us.</li>
+      </ul>
+
+      <p>We have decided to keep our identities and faces private for the sake of safety and privacy, but the need is very real and urgent. The funds will be managed by a trusted individual to ensure that the full amount reaches my partner and children.</p>
+
+      <p>In advance, thank you so much for your solidarity, your discretion, and for not leaving them to face this incredibly difficult time alone.</p>
+    </div>
+
+    <!-- ONLY CHANGE THIS ONE NUMBER -->
+    <div class="progress" data-raised="0" data-goal="5000">
+      <div class="progress-labels">
+        <span class="progress-raised"></span>
+        <span class="progress-goal"></span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill"></div>
+      </div>
+      <div class="progress-pct"></div>
+    </div>
+
+    <script>
+      const el = document.querySelector('.progress');
+      const raised = Number(el.dataset.raised);
+      const goal = Number(el.dataset.goal);
+      const pct = Math.min(Math.round((raised / goal) * 100), 100);
+      el.querySelector('.progress-raised').textContent = '$' + raised.toLocaleString() + ' raised';
+      el.querySelector('.progress-goal').textContent = '$' + goal.toLocaleString() + ' goal';
+      el.querySelector('.progress-fill').style.width = pct + '%';
+      el.querySelector('.progress-pct').textContent = pct + '% of goal';
+    </script>
+
+    <a href="https://account.venmo.com/u/Anne-Calabresi" class="donate-btn" target="_blank" rel="noopener">
+      Donate Now
+      <span class="donate-sub">Venmo @Anne-Calabresi &middot; comment "For O"</span>
+    </a>
+
+    <p class="share-note">Can't donate? Sharing this page helps just as much.</p>
+
+    <div class="flyer-section">
+      <h2>Download &amp; Share the Flyer</h2>
+      <a href="family-support-flyer.png" class="flyer-link" target="_blank">
+        View Flyer (Image)
+      </a>
+    </div>
+
+  </main>
+</body>
+</html>
